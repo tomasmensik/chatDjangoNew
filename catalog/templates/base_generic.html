@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row text_center">
       <div class="col-md-2">
       </div>
       <div class="col-md-8 text-center">{% block content %}{% endblock %}</div>
@@ -21,14 +21,22 @@
       <div class="col-lg-12 text-center">
               {% block sidebar %}
         <div class="sidebar-nav" style="padding:30px">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'users' %}">All users</a></li>
-          <li><a href="{% url 'rooms' %}">All rooms</a></li>
-          <li><a href="{% url 'messages' %}">All messages</a></li>
+          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'users' %}">All users</a>
+          <a href="{% url 'rooms' %}">All rooms</a>
+          <a href="{% url 'messages' %}">All messages</a>
         </div>
      {% endblock %}
       </div>
     </div>
   </div>
 </body>
+
+<style>
+  a {color:#66CAF2; text-decoration: none; margin:15px;}
+  a:hover {color:#368ABF, text-decoration: none; cursor: pointer;}
+  title{padding_top = 30}
+
+</style>
+
 </html>

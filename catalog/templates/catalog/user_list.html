@@ -3,10 +3,10 @@
 {% block content %}
   <h1>User List</h1>
   {% if user_list %}
-<div class="row">
+<div class="row xd">
     {% for user in user_list %}
-    <div class="col-md-4" style="padding:30px">
-        <div><strong> Name:</strong>{{user.name}}</div>
+    <div class="col-md-4 yd" style="padding:30px;">
+        <div><strong> Name:</strong> {{user.name}}</div>
         <div><strong>Password:</strong> {{user.password}}</div>
         <div><strong>Email:</strong> {{user.email}}</div>
         <div><strong>Age:</strong> {{user.age}}</div>
@@ -20,4 +20,12 @@
   {% else %}
     <p>There are no users.</p>
   {% endif %}
+
+<style>
+    .yd{box-shadow: 3px 3px 4px 4px #888888; margin:10px;}
+    .yd:hover{box-shadow: 3px 3px 4px 4px lightblue;}
+    h1{padding-bottom: 50px;}
+
+</style>
+
 {% endblock %}

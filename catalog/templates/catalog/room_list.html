@@ -3,9 +3,9 @@
 {% block content %}
   <h1>Room List</h1>
   {% if room_list %}
-<div class="row">
+<div class="row xd">
     {% for room in room_list %}
-    <div class="col-md-4" style="padding:30px">
+    <div class="col-md-4 yd" style="padding:30px">
         <div><strong>Title:</strong> {{room.title}}</div>
         <div><strong>Message:</strong> {{room.message}}</div>
         <div><strong>Date:</strong> {{room.date}}</div>
@@ -18,4 +18,13 @@
   {% else %}
     <p>There are no rooms.</p>
   {% endif %}
+
+<style>
+    .yd{box-shadow: 3px 3px 4px 4px #888888; margin:10px;}
+    .yd:hover{box-shadow: 3px 3px 4px 4px lightblue;}
+    h1{padding-bottom: 50px;}
+
+</style>
+
+
 {% endblock %}
