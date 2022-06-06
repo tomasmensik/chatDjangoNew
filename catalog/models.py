@@ -28,7 +28,7 @@ class User(models.Model):
 
 
     def get_absolute_url(self):
-        return reverse('model-detail-view', args=[str(self.id)])
+        return reverse('user-detail', args=[str(self.id)])
 
     def __str__(self):
         return self.name
@@ -48,7 +48,7 @@ class Message(models.Model):
 
 
     def get_absolute_url(self):
-        return reverse('model-detail-view', args=[str(self.id)])
+        return reverse('message-detail', args=[str(self.id)])
 
     def __str__(self):
         return self.title
@@ -69,7 +69,7 @@ class Room(models.Model):
 
 
     def get_absolute_url(self):
-        return reverse('model-detail-view', args=[str(self.id)])
+        return reverse('room-detail', args=[str(self.id)])
 
     def __str__(self):
         return self.title
