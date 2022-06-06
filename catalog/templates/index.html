@@ -1,15 +1,16 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Local Library Home</h1>
-  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
-  <h2>Dynamic content</h2>
-  <p>The library has the following record counts:</p>
-  <ul>
-    <li><strong>Books:</strong> {{ num_users }}</li>
-    <li><strong>Rooms:</strong> {{ num_rooms }}</li>
-    <li><strong>Messages:</strong> {{ num_messages }}</li>
-  </ul>
+  <h1 style="padding:30px">Chatting App</h1>
+  <p>Welcome to Chatting App, a website developed by <em>Tomáš Menšík</em>!</p>
+  <h2>Status</h2>
+  <p>STILL IN PROGRESS...</p>
+
+  <div style="padding:10px">
+    <strong>Users:</strong> {{ num_users }}
+    <strong>Rooms:</strong> {{ num_rooms }}
+    <strong>Messages:</strong> {{ num_messages }}
+  </div>
 
 <p>You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
 {% endblock %}

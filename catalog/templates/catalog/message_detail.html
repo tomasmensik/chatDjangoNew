@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ message.title }}</h1>
+
+  <p><strong>Author:</strong> <a href="">{{ message.title }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Summary:</strong> {{ message.number_of_people }}</p>
+  <p><strong>ISBN:</strong> {{ message.date }}</p>
+  <p><strong>Language:</strong> {{ message.descriptions }}</p>
+  <p><strong>Genre:</strong> {{ message.user_fk}}</p>
+
+  <div style="margin-left:20px;margin-top:20px">
+    <h4>Copies</h4>
+  </div>
+{% endblock %}
+

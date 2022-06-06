@@ -3,10 +3,10 @@
 {% block content %}
   <h1>User List</h1>
   {% if user_list %}
-  <ul>
+<div class="row">
     {% for user in user_list %}
-      <li>
-        <div><strong>Name:</strong>{{user.name}}</div>
+    <div class="col-md-4" style="padding:30px">
+        <div><strong> Name:</strong>{{user.name}}</div>
         <div><strong>Password:</strong> {{user.password}}</div>
         <div><strong>Email:</strong> {{user.email}}</div>
         <div><strong>Age:</strong> {{user.age}}</div>
@@ -14,9 +14,9 @@
         <div><strong>Followers:</strong> {{user.followers}}</div>
         <div><strong>Following:</strong> {{user.following}}</div>
 <!--        <a href={{ user.photo }}></a>-->
-      </li>
+    </div>
     {% endfor %}
-  </ul>
+  </div>
   {% else %}
     <p>There are no users.</p>
   {% endif %}

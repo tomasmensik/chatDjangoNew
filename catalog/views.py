@@ -40,3 +40,12 @@ class RoomListView(generic.ListView):
 
 class RoomDetailView(generic.DetailView):
     model = Room
+
+class MessageListView(generic.ListView):
+    model = Message
+    context_object_name = 'message_list'
+    queryset = Message.objects.filter(title__icontains='a')[:5]
+    template_name = 'messages/messages_t_list.html'
+
+class MessageDetailView(generic.DetailView):
+    model = Message

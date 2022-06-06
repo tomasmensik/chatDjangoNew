@@ -3,13 +3,18 @@
 {% block content %}
   <h1>Room List</h1>
   {% if room_list %}
-  <ul>
+<div class="row">
     {% for room in room_list %}
-      <li>
-        <a href="{{ room.get_absolute_url }}">{{ room.name }}</a> ({{room.email}})
-      </li>
+    <div class="col-md-4" style="padding:30px">
+        <div><strong>Title:</strong> {{room.title}}</div>
+        <div><strong>Message:</strong> {{room.message}}</div>
+        <div><strong>Date:</strong> {{room.date}}</div>
+        <div><strong>Likes:</strong> {{room.likes}}</div>
+        <div><strong>Dislikes:</strong> {{room.dislikes}}</div>
+<!--        <a href={{ user.photo }}></a>-->
+    </div>
     {% endfor %}
-  </ul>
+  </div>
   {% else %}
     <p>There are no rooms.</p>
   {% endif %}
