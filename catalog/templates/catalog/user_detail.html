@@ -1,15 +1,13 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Title: {{ user.name }}</h1>
+  <h1>Name: {{ user.name }}</h1>
 
-  <p><strong>Author:</strong> <a href="">{{ user.name }}</a></p> <!-- author detail link not yet defined -->
-  <p><strong>Summary:</strong> {{ user.email }}</p>
-  <p><strong>ISBN:</strong> {{ user.age }}</p>
-  <p><strong>Language:</strong> {{ user.gender }}</p>
-  <p><strong>Genre:</strong> {{ user.followers:", " }}</p>
-
-  <div style="margin-left:20px;margin-top:20px">
-    <h4>Copies</h4>
-  </div>
+        <div><strong>Name:</strong> {{userDetail.name}}</div>
+        <div><strong>Password:</strong> {{userDetail.password}}</div>
+        <div><strong>Email:</strong> {{userDetail.email}}</div>
+        <div><strong>Age:</strong> {{userDetail.age}}</div>
+        <div><strong>Gender:</strong> {{userDetail.gender}}</div>
+        <div><strong>Followers:</strong> {{userDetail.followers}}</div>
+        <div><strong>Following:</strong> {{userDetail.following}}</div>
 {% endblock %}

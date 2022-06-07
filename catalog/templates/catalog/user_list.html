@@ -7,13 +7,11 @@
 <div class="row xd">
     <div class="col-md-3"></div>
     <div class="col-md-6 yd" style="padding:30px;">
-        <div><strong> Name:</strong> {{user.name}}</div>
+        <div><strong>Name:</strong><a href="{% url 'userDetail' user.pk %}">{{user.name}}</a></div>
         <div><strong>Password:</strong> {{user.password}}</div>
         <div><strong>Email:</strong> {{user.email}}</div>
         <div><strong>Age:</strong> {{user.age}}</div>
         <div><strong>Gender:</strong> {{user.gender}}</div>
-        <div><strong>Followers:</strong> {{user.followers}}</div>
-        <div><strong>Following:</strong> {{user.following}}</div>
 <!--        <a href={{ user.photo }}></a>-->
     </div>
         <div class="col-md-3"></div>
