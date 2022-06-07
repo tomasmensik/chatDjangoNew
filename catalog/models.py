@@ -45,7 +45,7 @@ class Message(models.Model):
     # room_fk = models.ForeignKey('Room', on_delete=models.CASCADE)
 
     class Meta:
-        ordering = ['likes', 'title']
+        ordering = ['-likes', 'title']
 
 
     def get_absolute_url(self):

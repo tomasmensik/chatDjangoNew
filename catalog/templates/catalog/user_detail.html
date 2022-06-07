@@ -1,7 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Name: {{ user.name }}</h1>
+  <h1 style="padding:30px;">User detail</h1>
 
         <div><strong>Name:</strong> {{userDetail.name}}</div>
         <div><strong>Password:</strong> {{userDetail.password}}</div>
@@ -10,4 +10,6 @@
         <div><strong>Gender:</strong> {{userDetail.gender}}</div>
         <div><strong>Followers:</strong> {{userDetail.followers}}</div>
         <div><strong>Following:</strong> {{userDetail.following}}</div>
+        <div><strong>Joined groups:</strong> STILL IN PROGRESS...</div>
+        <div><strong>Number of messages:</strong> STILL IN PROGRESS...</div>
 {% endblock %}

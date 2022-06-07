@@ -4,27 +4,35 @@
   <h1 style="padding:30px;">Message List</h1>
   {% if message_list %}
     {% for message in message_list %}
-<div class="row xd">
-        <div class="col-md-3"></div>
-    <div class="col-md-6 yd" style="padding:30px">
-        <div><strong>Title:</strong> {{message.title}}</div>
-        <div><strong>Message:</strong> {{message.message}}</div>
-        <div><strong>Date:</strong> {{message.date}}</div>
-        <div><strong>Likes:</strong> {{message.likes}}</div>
-        <div><strong>Dislikes:</strong> {{message.dislikes}}</div>
-<!--        <a href={{ user.photo }}></a>-->
-    </div>
-        <div class="col-md-3"></div>
-      </div>
+<div class="card text-center">
+  <div class="card-body">
+    <h3 class="card-title">{{message.title}}</h3>
+        <p><strong>Title:</strong> {{message.title}}</p>
+        <p><strong>Author:</strong> STILL IN PROGRESS... </p>
+        <p><strong>Chat:</strong> STILL IN PROGRESS... </p>
+        <p><strong>Message:</strong> {{message.message}}</p>
+        <p><strong>Date:</strong> {{message.date}}</p>
+        <p><strong>Likes:</strong> {{message.likes}}</p>
+        <p><strong>Dislikes:</strong> {{message.dislikes}}</p>
+  </div>
+</div>
     {% endfor %}
   {% else %}
     <p>There are no rooms.</p>
   {% endif %}
 
 <style>
-    .yd{box-shadow: 3px 3px 4px 4px #888888; margin:10px;}
-    .yd:hover{box-shadow: 3px 3px 4px 4px lightblue;}
-    h1{padding-bottom: 50px;}
+
+    .card{
+    margin:50px;
+    }
+
+  .card:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+        z-index: 3;
+        border-color: black !important;
+    }
 
 </style>
 
