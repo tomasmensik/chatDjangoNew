@@ -3,18 +3,21 @@
 {% block content %}
   <h1>Room List</h1>
   {% if room_list %}
-<div class="row xd">
     {% for room in room_list %}
-    <div class="col-md-4 yd" style="padding:30px">
+<div class="row xd">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 yd" style="padding:30px">
         <div><strong>Title:</strong> {{room.title}}</div>
-        <div><strong>Message:</strong> {{room.message}}</div>
+        <div><strong>Description:</strong> {{room.description}}</div>
+        <div><strong>Number of people:</strong> 0/{{room.number_of_people}}</div>
+        <div><strong>Users in the room:</strong><a href="">{{room.user_fk}}</a> </div>
+        <div><strong>Messages in the room:</strong><a href="">{{room.message_fk}}</a></div>
         <div><strong>Date:</strong> {{room.date}}</div>
-        <div><strong>Likes:</strong> {{room.likes}}</div>
-        <div><strong>Dislikes:</strong> {{room.dislikes}}</div>
 <!--        <a href={{ user.photo }}></a>-->
     </div>
+      </div>
+    <div class="col-md-3"></div>
     {% endfor %}
-  </div>
   {% else %}
     <p>There are no rooms.</p>
   {% endif %}
@@ -23,6 +26,7 @@
     .yd{box-shadow: 3px 3px 4px 4px #888888; margin:10px;}
     .yd:hover{box-shadow: 3px 3px 4px 4px lightblue;}
     h1{padding-bottom: 50px;}
+    a{color:red;}
 
 </style>
 
