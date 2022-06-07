@@ -42,6 +42,7 @@ class Message(models.Model):
     date = models.DateField(auto_now=False, auto_now_add=True, verbose_name="Date")
     likes = models.IntegerField(blank=True, null=True, verbose_name="Likes", help_text="Enter your number of likes (e.g. 20)", default=0)
     dislikes = models.IntegerField(blank=True, null=True, verbose_name="Dislikes", help_text="Enter your number of dislikes (e.g. 20)", default=0)
+    # room_fk = models.ForeignKey('Room', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['likes', 'title']

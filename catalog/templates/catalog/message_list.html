@@ -1,14 +1,15 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Message List</h1>
+  <h1 style="padding:30px;">Message List</h1>
   {% if message_list %}
     {% for message in message_list %}
 <div class="row xd">
         <div class="col-md-3"></div>
     <div class="col-md-6 yd" style="padding:30px">
-        <div><strong>Title:</strong>{{message.title}}</div>
+        <div><strong>Title:</strong> {{message.title}}</div>
         <div><strong>Message:</strong> {{message.message}}</div>
+        <div><strong>Room:</strong> </div>
         <div><strong>Date:</strong> {{message.date}}</div>
         <div><strong>Likes:</strong> {{message.likes}}</div>
         <div><strong>Dislikes:</strong> {{message.dislikes}}</div>
